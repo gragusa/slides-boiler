@@ -1,0 +1,188 @@
+\documentclass[ignorenonframetext,]{beamer}
+\usetheme{metropolis}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textbf{{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.50,0.00,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,1.00}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,1.00}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.50,0.00,0.50}{{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{1.00,0.00,1.00}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{1.00,0.00,1.00}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.87,0.00,0.00}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.87,0.00,0.00}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.87,0.00,0.00}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.50,0.50,0.50}{\textit{{#1}}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.50,0.50,0.50}{\textit{{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.50,0.50,0.50}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.50,0.50,0.50}{\textbf{\textit{{#1}}}}}
+\newcommand{\OtherTok}[1]{{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.50}{{#1}}}
+\newcommand{\VariableTok}[1]{{#1}}
+\newcommand{\ControlFlowTok}[1]{{#1}}
+\newcommand{\OperatorTok}[1]{{#1}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textbf{{#1}}}
+\newcommand{\AttributeTok}[1]{{#1}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.50,0.50,0.50}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.00,1.00,0.00}{\textbf{{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight0.8\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+\title{Some title}
+\subtitle{Some subtitle}
+\author{Giuseppe Ragusa}
+\date{\today}
+\institute{Luiss University - Rome}
+\titlegraphic{\hfill\includegraphics[height=1.5cm]{pics/luisslogo.png}}
+
+
+\date{\today}
+
+\metroset{titleformat frame=smallcaps}
+\definecolor{Hohenheim_midgray}{HTML}{FBF8F8}
+\definecolor{mGray}{HTML}{F2F2F2}
+\definecolor{mTeal}{HTML}{479094}
+\setbeamercolor{block title}{bg=mTeal, fg=mDarkTeal}
+\setbeamercolor{block body}{
+  use={block title, normal text},
+  bg=mGray
+}
+
+\usepackage{framed}
+\renewenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\colorlet{shadecolor}{gray!40}
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{This should turn into a slide\ldots{}}
+
+\texttt{Julia} is a great programming language. There are few things
+that are special:
+
+\begin{itemize}
+\tightlist
+\item
+  Multiple dispatch
+\item
+  JIT compilation
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{We can try some code}
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\NormalTok{using MomentBasedEstimators}
+\NormalTok{a = randn(}\FloatTok{10}\NormalTok{)}
+\NormalTok{estimate!(GMM, fn, x0)}
+\end{Highlighting}
+\end{Shaded}
+
+Of course \[
+y=x\beta + u
+\]
+
+\end{frame}
+
+\begin{frame}{A block example}
+
+\begin{block}{An example}
+
+Block 1
+
+\end{block}
+
+\begin{block}{An example}
+
+Block 2
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Two columns}
+
+\begin{columns}
+
+\column{0.45\textwidth}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{pics/luisslogo.png}
+\caption{house.svg}
+\end{figure}
+
+\column{0.45\textwidth}
+
+\begin{itemize}
+\tightlist
+\item
+  IO
+\item
+  Tu
+\end{itemize}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}[plain]{}
+
+\end{frame}
+
+\begin{frame}{A full slide}
+
+\begin{itemize}
+\tightlist
+\item
+  This slides is full of shit
+\end{itemize}
+
+\end{frame}
+
+\end{document}
